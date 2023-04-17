@@ -1,0 +1,182 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage[T1]{fontenc}
+    \usepackage{tgbonum}
+    \usepackage[x11names]{xcolor}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage{fontawesome}
+    \usepackage{hyperref}
+    \usepackage[left=0.5in, right=0.4in, top=0.7in, bottom=0in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+    \fontfamily{phv}    
+	\color{RoyalBlue4}{{\Huge\textbf{Jimmy Yan}}\\}
+	\vspace{1mm}
+	\color{black}
+	\faSend \space \normalsize
+	\href{mailto:jimmyyan1337@gmail.com}{jimmyyan1337@gmail.com} $\cdot$ 
+	\faPhoneSquare \space 647-463-5156 $\cdot$ \faLinkedinSquare \space \href{https://www.linkedin.com/in/jimmy-yan-jy/}{linkedin.com/in/jimmy-yan-jy/}
+	$\cdot$  
+	\faGithub \space \href{https://github.com/JY20}{github.com/JY20}
+	\\
+\end{center}
+\vspace{-2mm}
+%==== Education ====%
+\header{\textbf{\color{RoyalBlue4}{{\large Education}}}}
+\normalsize
+\textbf{McMaster University}\hfill Hamilton, ON\\
+Bachelor of Engineering, Mechatronics Engineering\hfill Sep.2020 - Apr.2025
+\\McMaster Honor Award, GPA: 3.9/4.0\\
+\vspace{1mm}
+
+%==== Skills ====%
+\header{\textbf{\color{RoyalBlue4}{{\large Skills}}}}
+\normalsize
+\begin{tabular}{ l l }
+	Languages:        & Java, Python, SQL, Javascript, C, C++, HTML, CSS, Shell Script, Arduino, q     \\
+	Environments:     & Linux, Intellij, Pycharm, Visual Studio Code, SuperPuTTY, Processing, Anaconda \\
+	Databases: &   MySQL, MongoDB, KDB+, Microsoft SQL server \\
+	Tools/Frameworks:      & React JS, React Native, Spring Boot, Flutter, Node.js, Firebase, Matlab, Git, Jira\\
+\end{tabular}
+\vspace{1mm}
+
+%==== Experience ====%
+\header{\textbf{\color{RoyalBlue4}{{\large Experiences}}}}
+\vspace{1.5mm}
+\normalsize
+\textbf{Royal Bank of Canada Capital Markets} \hfill Toronto, ON\\
+\textit{Software Developer Intern} \hfill May.2022 - Present\\
+\vspace{-2mm}
+\begin{itemize} \itemsep -2pt
+    \item {Completed development of new features assigned on \textbf{Jira} for a full stack web-based application with using \textbf{React JS} and \textbf{Python} to support over 10 daily users to simulate over 100 testing orders daily}
+    \item{Carried the main responsibility of the data-feeder project using \textbf{Java} to handle data storage of algorithm and AI trading orders and log data from over 15 production servers in \textbf{KDB+}}
+    \item{Followed \textbf{Agile methodology} to take in various new business requirements to enable traders and UI team to access orders and log data in our \textbf{KDB+} database through \textbf{RESTful API} designed with using \textbf{Spring Boot}}
+    \item {Developed a \textbf{WebSocket} application in \textbf{Spring Boot} for UI team to enable traders to access over 10, 000 daily real time trading orders from over 15 production servers}
+    \item{Worked with QA and support teams to create and release new versions and builds from \textbf{Jenkins} and perform deployment of the new releases to different testing and production \textbf{Unix} server environments}
+    \item{Responsible for creating and submitting of over 40 change requests to the management team for new releases and changes}
+\end{itemize}
+
+\vspace{-1mm}
+
+\textbf{Admass} \hfill Remote\\
+\textit{Mobile Developer} \hfill Aug.2021 - Feb.2022\\
+\vspace{-2mm}
+\begin{itemize} \itemsep -2pt
+	\item{Worked in a team of 8 to develop a \textbf{React Native} social media influencer app within 4 weeks}
+    \item{Completed given tasks on \textbf{Jira} such as integrating over 3 \textbf{Figma} mobile page UI designs and app components into \textbf{React Native} mobile application}
+	\item{Integrate 2 given APIs with the \textbf{React Native} app as well as perform testing to the APIs in \textbf{Postman} for user accounts and data}
+\end{itemize}
+
+\vspace{-1mm}
+
+\textbf{iTalkRobot} \hfill Remote\\
+\textit{Software Developer} \hfill Jul.2020 - Apr.2021\\
+\vspace{-2mm}
+\begin{itemize} \itemsep -2pt
+	\item{Recreated and redesigned the old company website with \textbf{React JS} that was initially made with WordPress for future functionality and backend integrations}
+	\item{Developing the new delta dispenser app with \textbf{Flutter} and \textbf{Firebase} as well as designing the new hardware design in \textbf{Inventor}}
+\end{itemize}
+
+\vspace{-1mm}
+
+\textbf{The Foundation for Student Science and Technology} \hfill Remote\\
+\textit{Researcher} \hfill Jul.2019 - Aug.2019\\
+\vspace{-2mm}
+\begin{itemize} \itemsep -2pt
+	\item{Communicate with the mentor over \textbf{Slack} to develop a frog species detection app in \textbf{Android Studio}}
+	\item{Research on different machine learning models and image classification libraries}
+\end{itemize}
+
+\header{\textbf{\color{RoyalBlue4}{{\large Projects/Awards}}}}
+\vspace{1mm}
+{\textbf{Recyclops, TOHacks 2021}} \href{https://devpost.com/software/recyclops-lxghf8}{(Devpost Link)}
+\hfill{May.2021}\\
+
+\vspace{-2mm}
+ \begin{itemize} \itemsep -2pt
+    \item{Responsible for the development of the recycle reward app with using \textbf{Flutter} and \textbf{Firebase}} 
+    \item{Developed the backend module for \textbf{Flutter} to create connection and access all user data from real time cloud database from \textbf{Firebase}} 
+    \item {Implemented \textbf{Courier} email and SMS notification API into \textbf{Flutter} to alert users when item is mis-recycled and redeem rewards}
+    \item{Winner of the best use of Courier runner-up award out of 195 projects}
+\end{itemize}
+
+\vspace*{-1mm}
+
+{\textbf{Delta Dispenser, DeltaHacks 7}} \href{https://devpost.com/software/pill-dispenser-reminder-2000}{(Devpost Link)}
+\hfill{Mar.2021}\\
+\vspace{-2mm}
+ \begin{itemize} \itemsep -2pt
+    \item{Worked in a team of 4 to design an automatic pill dispenser hardware model by using \textbf{Inventor}}
+    \item{Used \textbf{Flutter} and \textbf{Firebase} to create a mobile app to keep track of the number of pills}
+    \item{Winner of the DSC McMaster challenge out of 74 projects}
+\end{itemize}
+\vspace*{0mm}
+
+\end{document}
